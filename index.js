@@ -11,6 +11,12 @@ const vm = new Vue({
 		// tableau contenant les quatre carrés et permettra de lier un nombre (0, 1, 2 ou 3 ) a un carré en utilisant l'index du tableau 
 		squareMapping: ['hautGauche', 'hautDroite', 'basDroite', 'basGauche'],
 	},
+	computed: {
+		score() {
+			const value = this.sequence.length - 1
+			return ( value < 0 ) ? `Score: 0` : `Score: ${value}`;
+		}
+	},
 	methods: {
 		// générer la sélection d'une couleur aléatoirement
 		addNewElemToSequense() {
