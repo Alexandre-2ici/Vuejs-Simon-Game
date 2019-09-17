@@ -12,22 +12,25 @@
 
 <body>
 	<div id="app">
-		<button>
+		<button @click="newGame">
 			NOUVELLE PARTIE
 		</button>
 		<hr>
 		** Nous afficherons ici le score **
 		<hr>
 		<div>
-			<span class="carre"></span>
-			<span class="carre"></span>
+			<span class="carre" :class="{ bleu: hautGauche }"></span>
+			<span class="carre" :class="{ rouge: hautDroite }"></span>
 		</div>
 		<div>
-			<span class="carre"></span>
-			<span class="carre"></span>
+			<span class="carre" :class="{ vert: basGauche }"></span>
+			<span class="carre" :class="{ jaune: basDroite }"></span>
 		</div>
+		<hr>
+		<span>sequence: </span>
+		<pre>{{ sequence }}</pre>
 	</div>
-	<script type="text/javascript" src="./index.js" ></script>
+	<script type="text/javascript" src="./index.js"></script>
 </body>
 
 </html>
