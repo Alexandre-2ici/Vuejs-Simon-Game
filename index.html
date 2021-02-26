@@ -13,27 +13,40 @@
 
 <body>
 	<div id="app">
-		<button @click="newGame">
-			NOUVELLE PARTIE
-		</button>
-		<hr>
-		<h4> {{ score }}</h4>
-		<hr>
-		<div>
-			<span class="carre" @click="selectSquare('hautGauche')" :class="{ orange: hautGauche }"></span>
-			<span class="carre" @click="selectSquare('hautMilieu')" :class="{ rose : hautMilieu }"></span>
-			<span class="carre" @click="selectSquare('hautDroite')" :class="{ rouge: hautDroite }"></span>
-		</div>
-		<div>
-			<span class="carre" @click="selectSquare('milieuGauche')" :class="{ magenta: milieuGauche }"></span>
-			<span class="carre" @click="selectSquare('milieuMilieu')" :class="{ gold : milieuMilieu }"></span>
-			<span class="carre" @click="selectSquare('milieuDroite')" :class="{ black: milieuDroite }"></span>
-		</div>
-		<div>
-			<span class="carre" @click="selectSquare('basGauche')" :class="{ bleu: basGauche }"></span>
-			<span class="carre" @click="selectSquare('basMilieu')" :class="{ vert: basMilieu }"></span>
-			<span class="carre" @click="selectSquare('basDroite')" :class="{ jaune: basDroite }"></span>
-		</div>
+		<header>
+			<h1>Choix de Niveau</h1>
+		<ul class="menu">	
+			<li class="item-menu">Facile</li>
+			<li class="item-menu">Medium</li>
+			<li class="item-menu">Hard</li>
+		</ul>
+		</header>
+		
+		<main>
+			<button @click="newGame">
+				NOUVELLE PARTIE
+			</button>
+			<hr>
+			<h4> {{ score }}</h4>
+			<hr>
+			<div class="jeu">
+				<span class="carre" @click="selectSquare('hautGauche')" :class="{ orange: hautGauche }"></span>
+				<span class="carre" @click="selectSquare('hautMilieu')" :class="{ rose : hautMilieu }"></span>
+				<span class="carre" @click="selectSquare('hautDroite')" :class="{ rouge: hautDroite }"></span>
+			</div>
+			<div class="jeu">
+				<span class="carre" @click="selectSquare('milieuGauche')" :class="{ magenta: milieuGauche }"></span>
+				<span class="carre" @click="selectSquare('milieuMilieu')" :class="{ gold : milieuMilieu }"></span>
+				<span class="carre" @click="selectSquare('milieuDroite')" :class="{ black: milieuDroite }"></span>
+			</div>
+			<div class="jeu">
+				<span class="carre" @click="selectSquare('basGauche')" :class="{ bleu: basGauche }"></span>
+				<span class="carre" @click="selectSquare('basMilieu')" :class="{ vert: basMilieu }"></span>
+				<span class="carre" @click="selectSquare('basDroite')" :class="{ jaune: basDroite }"></span>
+			</div>
+		</main>
+
+		
 	</div>
 	<script type="text/javascript" src="./index.js"></script>
 </body>

@@ -1,3 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+body {
+  width: 100vw;
+  height: 100vw;
+}
+
+#app h1 {
+  text-align: center;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em;
+}
+
+.item-menu {
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+  border: 2px solid black;
+  margin: auto;
+  padding: 15px;
+}
+
+.item-menu:hover {
+  background-color: black;
+  color: white;
+}
+
+.jeu {
+  text-align: center;
+}
+
 .carre {
   display: inline-block;
   width: 200px;
