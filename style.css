@@ -16,10 +16,10 @@
   background-color: green;
 }
 .jaune {
-  background-color: yellow;
+  background-color: rgb(251, 255, 0);
 }
 .orange {
-  background-color: orange;
+  background-color: rgb(255, 153, 0);
 }
 .rose {
   background-color: pink;
@@ -28,7 +28,7 @@
   background-color: magenta;
 }
 .gold {
-  background-color: gold;
+  background-color:rgb(182, 138, 29);
 }
 .black {
   background-color: black;
