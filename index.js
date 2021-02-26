@@ -6,12 +6,15 @@ const vm = new Vue({
 		hautGauche: false,
 		hautDroite: false,
 		hautMilieu: false,
+		basmilieu: false,
+		hautmilieu: false,
+		milieuMilieu: false,
 		basMilieu: false,
 		basGauche: false,
 		basDroite: false,
 		tmp: [],
 		// tableau contenant les quatre carrés et permettra de lier un nombre (0, 1, 2 ou 3 ) a un carré en utilisant l'index du tableau 
-		squareMapping: ['hautGauche', 'hautDroite', 'basDroite', 'basGauche', 'hautMilieu', 'basMilie'],
+		squareMapping: ['hautGauche', 'hautDroite', 'basDroite', 'basmilieu', 'hautmilieu', 'milieuMilieu', 'basGauche', 'hautMilieu', 'basMilieu'],
 	},
 	computed: {
 		score() {
@@ -22,7 +25,7 @@ const vm = new Vue({
 	methods: {
 		// générer la sélection d'une couleur aléatoirement
 		addNewElemToSequense() {
-			this.sequence.push(this.squareMapping[Math.floor(Math.random() * 6)]);
+			this.sequence.push(this.squareMapping[Math.floor(Math.random() * 9)]);
 			this.tmp = this.sequence.slice();
 		},
 		// remettre tous les carrés au gris
@@ -30,6 +33,9 @@ const vm = new Vue({
 			this.hautGauche = false;
 			this.hautDroite = false;
 			this.hautMilieu = false;
+			this.basmilieu = false,
+			this.hautmilieu = false,
+			this.milieuMilieu = false,
 		    this.basMilieu = false;
 			this.basGauche = false;
 			this.basDroite = false;
