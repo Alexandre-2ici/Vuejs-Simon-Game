@@ -21,10 +21,12 @@
 		<hr>
 		<div>
 			<span class="carre" @click="selectSquare('hautGauche')" :class="{ bleu: hautGauche }"></span>
+			<span class="carre" @click="selectSquare('hautMilieu')" :class="{ rouge: hautMilieu }"></span>
 			<span class="carre" @click="selectSquare('hautDroite')" :class="{ rouge: hautDroite }"></span>
 		</div>
 		<div>
 			<span class="carre" @click="selectSquare('basGauche')" :class="{ vert: basGauche }"></span>
+			<span class="carre" @click="selectSquare('basMilieu')" :class="{ jaune: basMilieu }"></span>
 			<span class="carre" @click="selectSquare('basDroite')" :class="{ jaune: basDroite }"></span>
 		</div>
 	</div>
@@ -32,3 +34,4 @@
 </body>
 
 </html>
+
