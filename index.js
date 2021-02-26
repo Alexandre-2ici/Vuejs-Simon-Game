@@ -5,11 +5,13 @@ const vm = new Vue({
 		sequence: [],
 		hautGauche: false,
 		hautDroite: false,
+		hautMilieu: false,
+		basMilieu: false,
 		basGauche: false,
 		basDroite: false,
 		tmp: [],
 		// tableau contenant les quatre carrés et permettra de lier un nombre (0, 1, 2 ou 3 ) a un carré en utilisant l'index du tableau 
-		squareMapping: ['hautGauche', 'hautDroite', 'basDroite', 'basGauche'],
+		squareMapping: ['hautGauche', 'hautDroite', 'basDroite', 'basGauche', 'hautMilieu', 'basMilie'],
 	},
 	computed: {
 		score() {
@@ -27,6 +29,8 @@ const vm = new Vue({
 		allGray() {
 			this.hautGauche = false;
 			this.hautDroite = false;
+			this.hautMilieu = false;
+		    this.basMilieu = false;
 			this.basGauche = false;
 			this.basDroite = false;
 		},
