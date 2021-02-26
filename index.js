@@ -22,7 +22,7 @@ const vm = new Vue({
 	methods: {
 		// générer la sélection d'une couleur aléatoirement
 		addNewElemToSequense() {
-			this.sequence.push(this.squareMapping[Math.floor(Math.random() * 4)]);
+			this.sequence.push(this.squareMapping[Math.floor(Math.random() * 6)]);
 			this.tmp = this.sequence.slice();
 		},
 		// remettre tous les carrés au gris
