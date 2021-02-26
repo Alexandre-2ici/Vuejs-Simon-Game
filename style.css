@@ -1,26 +1,35 @@
 .carre {
-    display: inline-block;
-    width:200px;
-    height:200px;
-    background-color:#ccc;
-    cursor:pointer;
-  }
-  
-  .bleu {
-    background-color:blue;
-  }
-  .rouge {
-    background-color:red;
-  }
-  .vert {
-    background-color:green;
-  }
-  .jaune {
-    background-color:yellow;
-  }
-  .orange {
-    background-color:orange;
-  }
-  .rose {
-    background-color:pink;
-  }
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.bleu {
+  background-color: blue;
+}
+.rouge {
+  background-color: red;
+}
+.vert {
+  background-color: green;
+}
+.jaune {
+  background-color: yellow;
+}
+.orange {
+  background-color: orange;
+}
+.rose {
+  background-color: pink;
+}
+.magenta {
+  background-color: magenta;
+}
+.gold {
+  background-color: gold;
+}
+.black {
+  background-color: black;
+}
