@@ -6,7 +6,7 @@ const vm = new Vue({
 		hautGauche: false,
 		hautDroite: false,
 		hautMilieu: false,
-		basmilieu: false,
+		basMilieu: false,
 		milieuGauche: false,
 		milieuMilieu: false,
 		milieuDroite: false,
