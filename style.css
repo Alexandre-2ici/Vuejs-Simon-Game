@@ -43,6 +43,8 @@ body {
   height: 200px;
   background-color: #ccc;
   cursor: pointer;
+  margin: 10px;
+  border: 2px solid white;
 }
 
 .bleu {
