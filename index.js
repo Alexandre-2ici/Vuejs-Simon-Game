@@ -60,11 +60,11 @@ const vm = new Vue({
 				if (vm.tmp[0]) {
 					setTimeout(() => {
 						vm.playSequence(vm.tmp[0]);
-					}, 600);
+					}, 500);
 				} else {
 					vm.tmp = vm.sequence.slice();
 				}
-			}, 600)
+			}, 500)
 		},
 		// instruction correspond au carré sur lequel l'utilisateur clique
 		selectSquare(instruction) {
@@ -77,7 +77,7 @@ const vm = new Vue({
 					if (!vm.tmp[0]) {
 						vm.nextTurn();
 					}
-				}, 500);
+				}, 200);
 			} else {
 				alert('perdu');
 
