@@ -66,6 +66,29 @@ const vm = new Vue({
 				}
 			}, 500)
 		},
+		//la difficulté
+		difficult(instruction) {
+			if (facile.getElementbyClass("item-menu-easy")) {
+				setTimeout(() => {
+					vm.playSequence(vm.tmp[0]);
+				}, 700);
+			}
+			else {
+			if (medium.getElementbyClass("item-menu-medium")) {
+				setTimeout(() => {
+					vm.playSequence(vm.tmp[0]);
+				}, 500);
+			}
+			else {
+			if (hard.getElementbyClass("item-menu-hard")) {
+				setTimeout(() => {
+					vm.playSequence(vm.tmp[0]);
+				}, 300);
+			}
+			}
+		}
+
+		},
 		// instruction correspond au carré sur lequel l'utilisateur clique
 		selectSquare(instruction) {
 			console.log(instruction);
