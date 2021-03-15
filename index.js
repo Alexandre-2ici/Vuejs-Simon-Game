@@ -13,19 +13,26 @@ const vm = new Vue({
 		basGauche: false,
 		basDroite: false,
 		record: 0,
+		score: 0,
 		tmp: [],
 		// tableau contenant les quatre carrés et permettra de lier un nombre (0, 1, 2 ou 3 ) a un carré en utilisant l'index du tableau 
 		squareMapping: ['hautGauche', 'hautDroite', 'basDroite', 'milieuGauche', 'milieuDroite', 'milieuMilieu', 'basGauche', 'hautMilieu', 'basMilieu'],
 	},
 	computed: {
-		score() {
+		/*score() {
 			const value = this.sequence.length - 1
 			return (value < 0) ? `Score: 0` : `Score: ${value}`;
-		},
+		},*/
 	},
 
 
 	methods: {
+
+		incrementScore(){
+			this.score++;
+			return this.score;
+		},
+
 		// générer la sélection d'une couleur aléatoirement
 		addNewElemToSequense() {
 			this.sequence.push(this.squareMapping[Math.floor(Math.random() * 9)]);
@@ -49,17 +56,22 @@ const vm = new Vue({
 			this.nextTurn();
 		},
 		endGame(){
+			this.sequence=[];
 			if(this.score > this.record){
-				this.record = this.score;
+				this.record = this.score ;
 			}else {
-				this.record = this.record;
+				this.record = this.score;
 			}
 		},
 		nextTurn() {
 			// génére la sélection d'une couleur aléatoirement
-			this.addNewElemToSequense();
-			this.allGray();
-			this.playSequence(this.tmp[0]);
+			setTimeout(function (){
+				vm.addNewElemToSequense();
+				vm.allGray();
+				vm.playSequence(vm.tmp[0]);
+				vm.incrementScore();
+			},400);
+			
 		},
 		playSequence(instruction) {
 			this[instruction] = true;
@@ -91,6 +103,7 @@ const vm = new Vue({
 			} else {
 				alert('perdu');
 				vm.endGame();
+				this.score = 0;
 			}
 
 		}
