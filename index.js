@@ -78,19 +78,19 @@ const vm = new Vue({
 		},
 		//la difficulté
 		difficult(instruction) {
-			if (facile.getElementbyClass("item-menu-easy")) {
+			if (facile.getElementbyId("easy")) {
 				setTimeout(() => {
 					vm.playSequence(vm.tmp[0]);
 				}, 700);
 			}
 			else {
-			if (medium.getElementbyClass("item-menu-medium")) {
+			if (medium.getElementbyId("medium")) {
 				setTimeout(() => {
 					vm.playSequence(vm.tmp[0]);
 				}, 500);
 			}
 			else {
-			if (hard.getElementbyClass("item-menu-hard")) {
+			if (hard.getElementbyId("hard")) {
 				setTimeout(() => {
 					vm.playSequence(vm.tmp[0]);
 				}, 300);
